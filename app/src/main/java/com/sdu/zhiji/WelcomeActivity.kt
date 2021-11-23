@@ -10,9 +10,9 @@ class WelcomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_welcome)
-        val button1:Button=findViewById(R.id.button1)
+        val button1:Button=findViewById(R.id.welcome_skip_button)
         val intent=Intent(this,MainActivity::class.java)
-        Handler().postDelayed({startActivity(intent)},5000)
+        Handler().postDelayed({startActivity(intent)},3000)
         button1.setOnClickListener {
             startActivity(intent)
         }
