@@ -16,6 +16,7 @@
         <activity
             android:name=".WelcomeActivity"
             android:exported="true"
+            android:launchMode="singleTask"
             android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

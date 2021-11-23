@@ -18,6 +18,7 @@ class WelcomeActivity : AppCompatActivity() {
         var flag:Boolean=false //是否点击
         button1.setOnClickListener {
             startActivity(intent)
+            finishAffinity()
             flag=true
         }
         //没点击跳过就等待五秒进入
@@ -25,6 +26,7 @@ class WelcomeActivity : AppCompatActivity() {
             if(!flag)
             {
                 startActivity(intent)
+                finishAffinity()
             }},5000)
 
 
