@@ -1,6 +1,8 @@
 package com.sdu.zhiji
 
 import android.os.Bundle
+import android.view.View
+import androidx.appcompat.widget.Toolbar
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
@@ -31,5 +33,11 @@ class MainActivity : AppCompatActivity() {
         )
         //setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+
+        val toolbar1:Toolbar=findViewById(R.id.toolBar1)
+        toolbar1.title=" "
+        setSupportActionBar(toolbar1)
+
     }
+
 }
