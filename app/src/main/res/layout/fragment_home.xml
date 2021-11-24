@@ -16,4 +16,165 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.15" />
+
+    <Button
+        android:id="@+id/button_post_information"
+        android:layout_width="94dp"
+        android:layout_height="86dp"
+        android:background="@color/Button_background_color"
+        android:drawableTop="@drawable/post_information"
+        android:drawablePadding="0dp"
+        android:text="岗位信息"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.482" />
+
+    <Button
+        android:id="@+id/button_professional_science"
+        android:layout_width="94dp"
+        android:layout_height="86dp"
+        android:background="@color/Button_background_color"
+        android:drawableTop="@drawable/professional_science"
+        android:drawablePadding="0dp"
+        android:text="职业科普"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.239"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.482" />
+
+    <Button
+        android:id="@+id/button_policy"
+        android:layout_width="94dp"
+        android:layout_height="86dp"
+        android:background="@color/Button_background_color"
+        android:drawableTop="@drawable/policy"
+        android:drawablePadding="0dp"
+        android:text="政策法规"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.482" />
+
+
+    <Button
+        android:id="@+id/button_thinking_skills_improve"
+        android:layout_width="94dp"
+        android:layout_height="86dp"
+        android:background="@color/Button_background_color"
+        android:drawableTop="@drawable/thinking_skills_improve"
+        android:drawablePadding="0dp"
+        android:text="思技提升"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.744"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.482" />
+
+    <Button
+        android:id="@+id/button_ministry_office"
+        android:layout_width="94dp"
+        android:layout_height="86dp"
+        android:background="@color/Button_background_color"
+        android:drawableTop="@drawable/ministry_office"
+        android:drawablePadding="0dp"
+        android:text="职事职记"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.482" />
+
+    <Button
+        android:id="@+id/button_social_etiquette"
+        android:layout_width="94dp"
+        android:layout_height="86dp"
+        android:background="@color/Button_background_color"
+        android:drawableTop="@drawable/social_etiquette"
+        android:drawablePadding="0dp"
+        android:text="交际礼仪"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.615" />
+
+    <Button
+        android:id="@+id/button_professional_outfit"
+        android:layout_width="94dp"
+        android:layout_height="86dp"
+        android:background="@color/Button_background_color"
+        android:drawableTop="@drawable/professional_outfit"
+        android:drawablePadding="0dp"
+        android:text="穿搭技巧"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.239"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.615" />
+
+    <Button
+        android:id="@+id/button_recommended_software"
+        android:layout_width="94dp"
+        android:layout_height="86dp"
+        android:background="@color/Button_background_color"
+        android:drawableTop="@drawable/recommended_software"
+        android:drawablePadding="0dp"
+        android:text="软件推荐"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.615" />
+
+    <Button
+        android:id="@+id/button_good_office_things"
+        android:layout_width="94dp"
+        android:layout_height="86dp"
+        android:background="@color/Button_background_color"
+        android:drawableTop="@drawable/good_office_things"
+        android:drawablePadding="0dp"
+        android:text="办公好物"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.744"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.615" />
+
+    <Button
+        android:id="@+id/button_gateway"
+        android:layout_width="94dp"
+        android:layout_height="86dp"
+        android:background="@color/Button_background_color"
+        android:drawableTop="@drawable/gateway"
+        android:drawablePadding="0dp"
+        android:text="传送大门"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.615" />
 </androidx.constraintlayout.widget.ConstraintLayout>
