@@ -47,7 +47,7 @@ class MainActivity : AppCompatActivity() {
         search1.setQueryHint("大家都在搜...")
 
         //通知按钮
-        val notice: ImageView =findViewById(R.id.imageView2)
+        val notice: ImageView =findViewById(R.id.imageButton1)
 
     }
 
