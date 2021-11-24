@@ -54,4 +54,27 @@
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/logo" />
 
+    <SearchView
+        android:id="@+id/search1"
+        android:layout_width="200dp"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintBottom_toBottomOf="@+id/toolBar1"
+        app:layout_constraintEnd_toEndOf="@+id/toolBar1"
+        app:layout_constraintStart_toStartOf="@+id/toolBar1"
+        app:layout_constraintTop_toTopOf="@+id/toolBar1" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/toolBar1"
+        app:layout_constraintEnd_toEndOf="@+id/toolBar1"
+        app:layout_constraintHorizontal_bias="0.888"
+        app:layout_constraintStart_toEndOf="@+id/search1"
+        app:layout_constraintTop_toTopOf="@id/toolBar1"
+        app:layout_constraintVertical_bias="0.695"
+        app:srcCompat="@drawable/search" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

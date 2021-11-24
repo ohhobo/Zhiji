@@ -2,6 +2,8 @@ package com.sdu.zhiji
 
 import android.os.Bundle
 import android.view.View
+import android.widget.ImageView
+import android.widget.SearchView
 import androidx.appcompat.widget.Toolbar
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
@@ -34,9 +36,18 @@ class MainActivity : AppCompatActivity() {
         //setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
 
+        //toolbar
         val toolbar1:Toolbar=findViewById(R.id.toolBar1)
         toolbar1.title=" "
         setSupportActionBar(toolbar1)
+
+        //搜索框
+        val search1: SearchView =findViewById(R.id.search1)
+        search1.setIconified(false)
+        search1.setQueryHint("大家都在搜...")
+
+        //通知按钮
+        val notice: ImageView =findViewById(R.id.imageView2)
 
     }
 
