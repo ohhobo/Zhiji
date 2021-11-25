@@ -13,7 +13,8 @@
         <activity
             android:name=".MainActivity"
             android:exported="false"
-            android:label="@string/title_activity_main" />
+            android:label="@string/title_activity_main"
+            android:windowSoftInputMode="adjustPan|stateHidden"/>
         <activity
             android:name=".WelcomeActivity"
             android:exported="true">

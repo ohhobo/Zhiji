@@ -12,6 +12,8 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.bumptech.glide.request.RequestOptions
@@ -31,6 +33,7 @@ class HomeFragment : Fragment() ,OnBannerListener{
     // This property is only valid between onCreateView and
     // onDestroyView.
     private val binding get() = _binding!!
+    private val recyclelist=ArrayList<recycle_home>()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -49,6 +52,14 @@ class HomeFragment : Fragment() ,OnBannerListener{
 //        homeViewModel.text.observe(viewLifecycleOwner, Observer {
 //            textView.text = it
 //        })
+
+        initRecycle()//初始化
+        val layerManager= LinearLayoutManager(activity)
+        val recycle_home: RecyclerView =root.findViewById(R.id.recycle_home)
+        recycle_home.layoutManager=layerManager
+        val adapter=recycle_Adapter(recyclelist)
+        recycle_home.adapter=adapter
+
         return root
     }
 
@@ -106,6 +117,12 @@ class HomeFragment : Fragment() ,OnBannerListener{
         override fun displayImage(context: Context, path: Any, imageView: ImageView) {
             Glide.with(context).load(path as String).into(imageView)
         }
+    }
+
+    private fun initRecycle(){
+        recyclelist.add(recycle_home(R.drawable.recycle1,"政策规划 | 假如你是胡晶晶，遭遇变相裁员怎么办？"))
+        recyclelist.add(recycle_home(R.drawable.recycle2,"职业科普 | 通信专业就业方向有哪些？"))
+        recyclelist.add(recycle_home(R.drawable.recycle3,"职业穿搭 | 职业信任如何穿出自信？"))
     }
 
 }
