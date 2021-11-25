@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
         //点击button1 跳转至注册界面
         val button1 = findViewById<Button>(R.id.signup_button)
         button1.setOnClickListener {
-            val intent = Intent(this, SignupActivity::class.java)
+            val intent = Intent(this,SignupActivity::class.java)
             startActivity(intent)
         }
         //点击button2 跳转至登录界面
