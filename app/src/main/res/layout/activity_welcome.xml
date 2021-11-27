@@ -4,15 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/start_screen"
-    tools:context=".WelcomeActivity">
+    android:background="@drawable/start_screen">
 
 
     <Button
         android:id="@+id/button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="300dp"
+        android:layout_marginStart="264dp"
         android:layout_marginTop="16dp"
         android:text="跳过"
         android:textColor="@color/white"

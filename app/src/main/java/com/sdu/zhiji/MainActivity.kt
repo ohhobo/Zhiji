@@ -1,5 +1,6 @@
 package com.sdu.zhiji
 
+import android.content.pm.ActivityInfo
 import android.os.Bundle
 import android.view.View
 import android.widget.ImageView
@@ -43,12 +44,14 @@ class MainActivity : AppCompatActivity() {
 
         //搜索框
         val search1: SearchView =findViewById(R.id.search1)
-        search1.setIconified(false)
+        search1.setIconifiedByDefault(false)
         search1.setQueryHint("大家都在搜...")
 
         //通知按钮
         val notice: ImageView =findViewById(R.id.imageButton1)
 
+        //保持竖屏
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT)
     }
 
 }

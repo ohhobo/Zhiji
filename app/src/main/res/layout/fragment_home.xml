@@ -15,12 +15,12 @@
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.15" />
+        app:layout_constraintVertical_bias="0.112" />
 
     <Button
         android:id="@+id/button_post_information"
         android:layout_width="94dp"
-        android:layout_height="86dp"
+        android:layout_height="87dp"
         android:background="@color/Button_background_color"
         android:drawableTop="@drawable/post_information"
         android:drawablePadding="0dp"
@@ -31,12 +31,12 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.482" />
+        app:layout_constraintVertical_bias="0.432" />
 
     <Button
         android:id="@+id/button_professional_science"
         android:layout_width="94dp"
-        android:layout_height="86dp"
+        android:layout_height="87dp"
         android:background="@color/Button_background_color"
         android:drawableTop="@drawable/professional_science"
         android:drawablePadding="0dp"
@@ -47,12 +47,13 @@
         app:layout_constraintHorizontal_bias="0.239"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.482" />
+        app:layout_constraintVertical_bias="0.432" />
+
 
     <Button
         android:id="@+id/button_policy"
         android:layout_width="94dp"
-        android:layout_height="86dp"
+        android:layout_height="87dp"
         android:background="@color/Button_background_color"
         android:drawableTop="@drawable/policy"
         android:drawablePadding="0dp"
@@ -63,13 +64,12 @@
         app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.482" />
-
+        app:layout_constraintVertical_bias="0.432" />
 
     <Button
         android:id="@+id/button_thinking_skills_improve"
         android:layout_width="94dp"
-        android:layout_height="86dp"
+        android:layout_height="87dp"
         android:background="@color/Button_background_color"
         android:drawableTop="@drawable/thinking_skills_improve"
         android:drawablePadding="0dp"
@@ -80,12 +80,12 @@
         app:layout_constraintHorizontal_bias="0.744"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.482" />
+        app:layout_constraintVertical_bias="0.432" />
 
     <Button
         android:id="@+id/button_ministry_office"
         android:layout_width="94dp"
-        android:layout_height="86dp"
+        android:layout_height="87dp"
         android:background="@color/Button_background_color"
         android:drawableTop="@drawable/ministry_office"
         android:drawablePadding="0dp"
@@ -96,12 +96,12 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.482" />
+        app:layout_constraintVertical_bias="0.432" />
 
     <Button
         android:id="@+id/button_social_etiquette"
         android:layout_width="94dp"
-        android:layout_height="86dp"
+        android:layout_height="87dp"
         android:background="@color/Button_background_color"
         android:drawableTop="@drawable/social_etiquette"
         android:drawablePadding="0dp"
@@ -112,12 +112,12 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.615" />
+        app:layout_constraintVertical_bias="0.565" />
 
     <Button
         android:id="@+id/button_professional_outfit"
         android:layout_width="94dp"
-        android:layout_height="86dp"
+        android:layout_height="87dp"
         android:background="@color/Button_background_color"
         android:drawableTop="@drawable/professional_outfit"
         android:drawablePadding="0dp"
@@ -128,12 +128,12 @@
         app:layout_constraintHorizontal_bias="0.239"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.615" />
+        app:layout_constraintVertical_bias="0.565" />
 
     <Button
         android:id="@+id/button_recommended_software"
         android:layout_width="94dp"
-        android:layout_height="86dp"
+        android:layout_height="87dp"
         android:background="@color/Button_background_color"
         android:drawableTop="@drawable/recommended_software"
         android:drawablePadding="0dp"
@@ -144,12 +144,12 @@
         app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.615" />
+        app:layout_constraintVertical_bias="0.565" />
 
     <Button
         android:id="@+id/button_good_office_things"
         android:layout_width="94dp"
-        android:layout_height="86dp"
+        android:layout_height="87dp"
         android:background="@color/Button_background_color"
         android:drawableTop="@drawable/good_office_things"
         android:drawablePadding="0dp"
@@ -160,12 +160,12 @@
         app:layout_constraintHorizontal_bias="0.744"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.615" />
+        app:layout_constraintVertical_bias="0.565" />
 
     <Button
         android:id="@+id/button_gateway"
         android:layout_width="94dp"
-        android:layout_height="86dp"
+        android:layout_height="87dp"
         android:background="@color/Button_background_color"
         android:drawableTop="@drawable/gateway"
         android:drawablePadding="0dp"
@@ -176,16 +176,17 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.615" />
+        app:layout_constraintVertical_bias="0.565" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycle_home"
-        android:layout_width="match_parent"
-        android:layout_height="166dp"
+        android:layout_width="wrap_content"
+        android:layout_height="210dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.88" />
+        app:layout_constraintVertical_bias="0.893" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

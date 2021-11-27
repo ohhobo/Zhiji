@@ -1,6 +1,7 @@
 package com.sdu.zhiji
 
 import android.content.Intent
+import android.content.pm.ActivityInfo
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
@@ -12,6 +13,8 @@ class WelcomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_welcome)
 
+        //保持竖屏
+       setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT)
 
         val button1:Button=findViewById(R.id.button1)
         val intent=Intent(this,MainActivity::class.java)
