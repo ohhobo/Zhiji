@@ -181,11 +181,11 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycle_home"
         android:layout_width="match_parent"
-        android:layout_height="172dp"
+        android:layout_height="166dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.9" />
+        app:layout_constraintVertical_bias="0.88" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

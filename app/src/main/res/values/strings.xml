@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Zhiji</string>
+    <string name="app_name">职记</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="title_home">主页</string>
     <string name="title_chat">聊</string>

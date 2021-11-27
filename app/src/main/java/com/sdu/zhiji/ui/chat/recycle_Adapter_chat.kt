@@ -1,4 +1,4 @@
-package com.sdu.zhiji.ui.home
+package com.sdu.zhiji.ui.chat
 
 import android.view.LayoutInflater
 import android.view.View
@@ -7,23 +7,20 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.sdu.zhiji.R
-import com.sdu.zhiji.ui.home.recycle_home
 
-class recycle_Adapter (val recycleList:List<recycle_home>):
-    RecyclerView.Adapter<recycle_Adapter.ViewHolder>() {
+class recycle_Adapter_chat (val recycleList:List<recycle_chat>):
+    RecyclerView.Adapter<recycle_Adapter_chat.ViewHolder>() {
 
     inner class ViewHolder(view:View):RecyclerView.ViewHolder(view) {
-        val imageId:ImageView=view.findViewById(R.id.recycle1)
-        val text:TextView=view.findViewById(R.id.recycle_text1)
+        val text:TextView=view.findViewById(R.id.text_chat_recycle)
     }
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view=LayoutInflater.from(parent.context).inflate(R.layout.home_recycle,parent,false)
+        val view=LayoutInflater.from(parent.context).inflate(R.layout.chat_recycle,parent,false)
         return ViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val recyclelist=recycleList[position]
-        holder.imageId.setImageResource(recyclelist.imageId)
         holder.text.text=recyclelist.text
     }
 
