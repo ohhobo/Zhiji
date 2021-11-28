@@ -11,13 +11,13 @@
         android:id="@+id/signup_username"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="username"/>
+        android:hint="@string/usr_en"/>
 
     <EditText
         android:id="@+id/signup_password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="password"/>
+        android:hint="@string/psw_en"/>
 
     <Button
         android:id="@+id/signup_submit"
