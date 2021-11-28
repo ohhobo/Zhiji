@@ -4,6 +4,10 @@
     <string name="signin">登录</string>
     <string name="signup">注册</string>
     <string name="usr_en">username</string>
+    <string name="usr_cn">用户名</string>
     <string name="psw_en">password</string>
+    <string name="psw_cn">密码</string>
     <string name="signup_now">立即注册</string>
+    <string name="forget_password">忘记密码</string>
+    <string name="caution">登录或注册即代表您同意职记隐私政策与用户协议</string>
 </resources>

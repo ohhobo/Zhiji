@@ -14,19 +14,6 @@ import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
 import retrofit2.http.Query
 
-val retrofit: Retrofit = Retrofit.Builder()
-    .baseUrl("http://81.68.226.148/")
-    .addConverterFactory(GsonConverterFactory.create())
-    .build()
-
-class SignUpApp(val code: String, val username: String, val password: String)
-interface SignUpService {
-    @GET("api/signup.php")
-    fun getAppData(
-        @Query("username") para_u: String,
-        @Query("password") para_p: String
-    ): Call<SignUpApp>
-}
 
 class SignupActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

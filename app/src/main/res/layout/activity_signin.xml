@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:screenOrientation="portrait"
     android:background="@drawable/pic_back1"
+    android:screenOrientation="portrait"
     tools:context=".MainActivity">
 
     <ImageView
@@ -46,21 +46,35 @@
 
     <Button
         android:id="@+id/signin_button_signup"
+        style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/signup_now"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintBottom_toBottomOf="@id/signin_target1"
+        app:layout_constraintHorizontal_bias="1"
         app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/signin_target1"
+        app:layout_constraintTop_toTopOf="@+id/signin_target1"
+        tools:ignore="MissingConstraints"></Button>
+
+    <Button
+        android:id="@+id/signin_button_forget"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/forget_password"
+        app:layout_constraintBottom_toBottomOf="@id/signin_target1"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintLeft_toRightOf="@id/signin_target1"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signin_icon_password"
-        app:layout_constraintVertical_bias="0.05"
+        app:layout_constraintTop_toTopOf="@+id/signin_target1"
         tools:ignore="MissingConstraints"></Button>
 
     <Button
         android:id="@+id/signin_button_submit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/button_drawable"
         android:text="@string/signin"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -81,6 +95,31 @@
         app:layout_constraintTop_toBottomOf="@+id/signin_icon_logo"
         app:layout_constraintVertical_bias="0.15"
         tools:ignore="MissingConstraints"></EditText>
+
+    <TextView
+        android:id="@+id/signin_target1"
+        android:layout_width="10dp"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:text="|"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signin_button_submit"
+        app:layout_constraintVertical_bias="0.2"></TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/caution"
+        android:textColor="#231D1D"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/signin_target1"
+        app:layout_constraintVertical_bias="0.1"></TextView>
 
     <EditText
         android:id="@+id/signin_password"

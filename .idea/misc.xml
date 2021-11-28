@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Zhiji/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.140625" />
+        <entry key="..\:/Zhiji/app/src/main/res/drawable/button_drawable.xml" value="0.14583333333333334" />
         <entry key="..\:/Zhiji/app/src/main/res/drawable/edittextbox.xml" value="0.14583333333333334" />
         <entry key="..\:/Zhiji/app/src/main/res/drawable/ic_icon_password.xml" value="0.14583333333333334" />
         <entry key="..\:/Zhiji/app/src/main/res/drawable/ic_icon_user.xml" value="0.13333333333333333" />
@@ -14,7 +15,7 @@
         <entry key="..\:/Zhiji/app/src/main/res/layout-w1240dp/activity_signin.xml" value="0.1" />
         <entry key="..\:/Zhiji/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/Zhiji/app/src/main/res/layout/activity_signin.xml" value="0.264" />
-        <entry key="..\:/Zhiji/app/src/main/res/layout/activity_signup.xml" value="0.2" />
+        <entry key="..\:/Zhiji/app/src/main/res/layout/activity_signup.xml" value="0.4" />
         <entry key="..\:/Zhiji/app/src/main/res/layout/activity_welcome.xml" value="0.16458333333333333" />
         <entry key="..\:/competition/Zhiji/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/competition/Zhiji/app/src/main/res/layout/activity_welcome.xml" value="0.25364583333333335" />

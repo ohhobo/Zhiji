@@ -19,15 +19,6 @@ import retrofit2.http.GET
 import retrofit2.http.Query
 
 
-class SignInApp(val code: String)
-interface SignInService {
-    @GET("api/signin.php")
-    fun getAppData(
-        @Query("username") para_u: String,
-        @Query("password") para_p: String
-    ): Call<SignInApp>
-}
-
 class SigninActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -46,6 +37,9 @@ class SigninActivity : AppCompatActivity() {
                             "sign in successfully!",
                             Toast.LENGTH_SHORT
                         ).show()
+                        SignStatus.status = 1
+                        val intent = Intent(this@SigninActivity, MainActivity::class.java)
+                        startActivity(intent)
                     } else {
                         val edit1 = findViewById<EditText>(R.id.signin_password).setText("")
                         val edit2 = findViewById<EditText>(R.id.signin_username).setText("")
@@ -64,5 +58,9 @@ class SigninActivity : AppCompatActivity() {
             })
         }
         val button2 = findViewById<Button>(R.id.signin_button_signup)
+        button2.setOnClickListener {
+            val intent = Intent(this, SignupActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
