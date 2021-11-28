@@ -1,27 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:screenOrientation="portrait"
-    tools:context=".SignupActivity">
+    android:background="@drawable/pic_back1"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/signup_icon_logo"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.2"
+        tools:ignore="MissingConstraints"></ImageView>
+
+    <ImageView
+        android:id="@+id/signup_icon_user"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_icon_user"
+        app:layout_constraintBottom_toBottomOf="@+id/signup_username"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/signup_username"
+        app:layout_constraintTop_toTopOf="@+id/signup_username"
+        tools:ignore="MissingConstraints"></ImageView>
+
+    <ImageView
+        android:id="@+id/signup_icon_password"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_icon_password"
+        app:layout_constraintBottom_toBottomOf="@+id/signup_password"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/signup_password"
+        app:layout_constraintTop_toTopOf="@+id/signup_password"
+        tools:ignore="MissingConstraints"></ImageView>
 
     <EditText
         android:id="@+id/signup_username"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="@string/usr_en"/>
+        android:layout_width="130dp"
+        android:layout_height="40dp"
+        android:hint="@string/usr_en"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintLeft_toLeftOf="@id/signup_icon_logo"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signup_icon_logo"
+        app:layout_constraintVertical_bias="0.15"
+        tools:ignore="MissingConstraints"></EditText>
 
     <EditText
         android:id="@+id/signup_password"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="@string/psw_en"/>
+        android:layout_width="130dp"
+        android:layout_height="40dp"
+        android:hint="@string/psw_en"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@+id/signup_username"
+        app:layout_constraintRight_toRightOf="@+id/signup_username"
+        app:layout_constraintTop_toBottomOf="@+id/signup_username"
+        app:layout_constraintVertical_bias="0.05"
+        tools:ignore="MissingConstraints"></EditText>
 
     <Button
         android:id="@+id/signup_submit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/signup" />
-</LinearLayout>
+        android:text="@string/signup"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signup_password"
+        app:layout_constraintVertical_bias="0.2"
+        tools:ignore="MissingConstraints"></Button>
+</androidx.constraintlayout.widget.ConstraintLayout>

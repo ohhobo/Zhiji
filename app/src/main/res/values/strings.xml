@@ -5,4 +5,5 @@
     <string name="signup">注册</string>
     <string name="usr_en">username</string>
     <string name="psw_en">password</string>
+    <string name="signup_now">立即注册</string>
 </resources>

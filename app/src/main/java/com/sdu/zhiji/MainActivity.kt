@@ -12,12 +12,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        //点击button1 跳转至注册界面
-        val button1 = findViewById<Button>(R.id.signup_button)
-        button1.setOnClickListener {
-            val intent = Intent(this,SignupActivity::class.java)
-            startActivity(intent)
-        }
         //点击button2 跳转至登录界面
         val button2 = findViewById<Button>(R.id.signin_button)
         button2.setOnClickListener {

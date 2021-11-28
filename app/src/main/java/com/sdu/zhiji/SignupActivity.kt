@@ -1,5 +1,6 @@
 package com.sdu.zhiji
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -18,37 +19,33 @@ val retrofit: Retrofit = Retrofit.Builder()
     .addConverterFactory(GsonConverterFactory.create())
     .build()
 
-class App(val code: String, val username: String, val password: String)
-interface AppService {
+class SignUpApp(val code: String, val username: String, val password: String)
+interface SignUpService {
     @GET("api/signup.php")
-    fun getAppData(@Query("username") para_u: String, @Query("password") para_p: String): Call<App>
+    fun getAppData(
+        @Query("username") para_u: String,
+        @Query("password") para_p: String
+    ): Call<SignUpApp>
 }
 
 class SignupActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
-        Log.d("byr", "im here")
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_signup)
         val button1 = findViewById<Button>(R.id.signup_submit)
-        Log.d("byr", "im here1")
         button1.setOnClickListener {
-            Log.d("byr", "im here2")
             val username = findViewById<EditText>(R.id.signup_username).text.toString()
             val password = findViewById<EditText>(R.id.signup_password).text.toString()
-            val appService = retrofit.create(AppService::class.java)
-            appService.getAppData(username, password).enqueue(object : Callback<App> {
-                override fun onResponse(call: Call<App>, response: Response<App>) {
-                    Log.d("byr", "im here3")
+            val appService = retrofit.create(SignUpService::class.java)
+            appService.getAppData(username, password).enqueue(object : Callback<SignUpApp> {
+                override fun onResponse(call: Call<SignUpApp>, response: Response<SignUpApp>) {
                     val list = response.body()
                     if (list != null) {
-                        Log.d("SignupActivity", "return_code:${list.code}")
-                        Log.d("SignupActivity", "return_username:${list.username}")
-                        Log.d("SignupActivity", "return_password:${list.password}")
                     }
                 }
 
-                override fun onFailure(call: Call<App>, t: Throwable) {
-                    Log.d("byr", "im here4")
+                override fun onFailure(call: Call<SignUpApp>, t: Throwable) {
+                    Log.d("signupError", "sign up error")
                     t.printStackTrace()
                 }
             })

@@ -8,14 +8,6 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/signup_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/signup"
-        android:textSize="20sp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        tools:ignore="MissingConstraints"></Button>
-    <Button
         android:id="@+id/signin_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
