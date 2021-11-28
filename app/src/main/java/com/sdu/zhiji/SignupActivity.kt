@@ -13,6 +13,11 @@ import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
 import retrofit2.http.Query
 
+val retrofit: Retrofit = Retrofit.Builder()
+    .baseUrl("http://81.68.226.148/")
+    .addConverterFactory(GsonConverterFactory.create())
+    .build()
+
 class App(val code: String, val username: String, val password: String)
 interface AppService {
     @GET("api/signup.php")
@@ -30,10 +35,6 @@ class SignupActivity : AppCompatActivity() {
             Log.d("byr", "im here2")
             val username = findViewById<EditText>(R.id.signup_username).text.toString()
             val password = findViewById<EditText>(R.id.signup_password).text.toString()
-            val retrofit: Retrofit = Retrofit.Builder()
-                .baseUrl("http://81.68.226.148/")
-                .addConverterFactory(GsonConverterFactory.create())
-                .build()
             val appService = retrofit.create(AppService::class.java)
             appService.getAppData(username, password).enqueue(object : Callback<App> {
                 override fun onResponse(call: Call<App>, response: Response<App>) {
