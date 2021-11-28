@@ -43,7 +43,7 @@ class SignupActivity : AppCompatActivity() {
                     if (list != null) {
                         Log.d("SignupActivity", "return_code:${list.code}")
                         Log.d("SignupActivity", "return_username:${list.username}")
-                        Log.d("SignupActivity", "return_password${list.password}")
+                        Log.d("SignupActivity", "return_password:${list.password}")
                     }
                 }
 
