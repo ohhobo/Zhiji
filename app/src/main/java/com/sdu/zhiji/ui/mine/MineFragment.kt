@@ -30,10 +30,14 @@ class MineFragment : Fragment() {
         _binding = FragmentMineBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textMine
-        mineViewModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
-        })
+
+//        val textView: TextView = binding.textMine
+//        mineViewModel.text.observe(viewLifecycleOwner, Observer {
+//            textView.text = it
+//        })
+
+
+
         return root
     }
 

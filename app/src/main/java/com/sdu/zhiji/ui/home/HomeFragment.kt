@@ -55,6 +55,7 @@ class HomeFragment : Fragment() ,OnBannerListener{
         val adapter=recycle_Adapter_home(recyclelist)
         recycle_home.adapter=adapter
 
+
         return root
     }
 
