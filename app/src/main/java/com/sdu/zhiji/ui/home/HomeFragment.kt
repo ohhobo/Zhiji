@@ -116,9 +116,9 @@ class HomeFragment : Fragment() ,OnBannerListener{
     }
 
     private fun initRecycle(){
-        recyclelist.add(recycle_home(R.drawable.recycle1,"政策规划 | 假如你是胡晶晶，遭遇变相裁员怎么办？"))
-        recyclelist.add(recycle_home(R.drawable.recycle2,"职业科普 | 通信专业就业方向有哪些？"))
-        recyclelist.add(recycle_home(R.drawable.recycle3,"职业穿搭 | 职业新人如何穿出自信？"))
+        recyclelist.add(recycle_home(R.drawable.recycle_home1,"政策规划 | 假如你是胡晶晶，遭遇变相裁员怎么办？"))
+        recyclelist.add(recycle_home(R.drawable.recycle_home2,"职业科普 | 通信专业就业方向有哪些？"))
+        recyclelist.add(recycle_home(R.drawable.recycle_home3,"职业穿搭 | 职业新人如何穿出自信？"))
     }
 
 }

@@ -10,4 +10,6 @@
     <color name="toolBar_color">#6DADAB</color>
     <color name="Button_background_color">#00FF0000</color>
     <color name="silver">#C0C0C0</color>
+    <color name="gray">	#808080</color>
+    <color name="orange">#F4A460</color>
 </resources>

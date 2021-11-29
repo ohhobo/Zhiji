@@ -3,6 +3,7 @@ plugins {
     id 'kotlin-android'
 }
 
+apply plugin: 'kotlin-kapt'
 android {
     compileSdk 31
 
