@@ -38,7 +38,7 @@ class SigninActivity : AppCompatActivity() {
                             Toast.LENGTH_SHORT
                         ).show()
                         SignStatus.status = 1
-                        SignStatus.username=username
+                        SignStatus.username = username
                         val intent = Intent(this@SigninActivity, MainActivity::class.java)
                         startActivity(intent)
                     } else {
