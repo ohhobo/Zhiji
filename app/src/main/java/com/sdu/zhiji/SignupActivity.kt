@@ -13,6 +13,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
 import retrofit2.http.Query
+import kotlin.math.sign
 
 
 class SignupActivity : AppCompatActivity() {
@@ -27,7 +28,11 @@ class SignupActivity : AppCompatActivity() {
             appService.getAppData(username, password).enqueue(object : Callback<SignUpApp> {
                 override fun onResponse(call: Call<SignUpApp>, response: Response<SignUpApp>) {
                     val list = response.body()
-                    if (list != null) {
+                    if (list != null && list.code == "1") {
+                        SignStatus.status = 1
+                        SignStatus.username = username
+                        val intent = Intent(this@SignupActivity, MainActivity::class.java)
+                        startActivity(intent)
                     }
                 }
 

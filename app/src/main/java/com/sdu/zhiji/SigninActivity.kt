@@ -38,9 +38,11 @@ class SigninActivity : AppCompatActivity() {
                             Toast.LENGTH_SHORT
                         ).show()
                         SignStatus.status = 1
+                        SignStatus.username=username
                         val intent = Intent(this@SigninActivity, MainActivity::class.java)
                         startActivity(intent)
                     } else {
+                        //清空editText输入框并弹出提示
                         val edit1 = findViewById<EditText>(R.id.signin_password).setText("")
                         val edit2 = findViewById<EditText>(R.id.signin_username).setText("")
                         Toast.makeText(

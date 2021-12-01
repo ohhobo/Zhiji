@@ -23,9 +23,12 @@ val retrofit: Retrofit = Retrofit.Builder()
     .baseUrl("http://81.68.226.148/")
     .addConverterFactory(GsonConverterFactory.create())
     .build()
-object SignStatus{
-    var status:Int=0
+
+object SignStatus {
+    var status: Int = 0
+    var username:String=""
 }
+
 //api for sign_in
 class SignInApp(val code: String)
 interface SignInService {
@@ -35,6 +38,7 @@ interface SignInService {
         @Query("password") para_p: String
     ): Call<SignInApp>
 }
+
 //api for sign_up
 class SignUpApp(val code: String, val username: String, val password: String)
 interface SignUpService {

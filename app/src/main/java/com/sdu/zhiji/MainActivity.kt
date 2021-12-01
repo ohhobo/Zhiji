@@ -15,8 +15,12 @@ class MainActivity : AppCompatActivity() {
         //点击button2 跳转至登录界面
         val button2 = findViewById<Button>(R.id.signin_button)
         button2.setOnClickListener {
-            val intent = Intent(this, SigninActivity::class.java)
-            startActivity(intent)
+            if (SignStatus.status == 1) {
+                Toast.makeText(this,"already sign in",Toast.LENGTH_SHORT)
+            } else {
+                val intent = Intent(this, SigninActivity::class.java)
+                startActivity(intent)
+            }
         }
     }
 }
