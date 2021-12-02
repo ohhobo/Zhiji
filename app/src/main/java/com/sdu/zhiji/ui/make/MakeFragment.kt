@@ -1,5 +1,6 @@
 package com.sdu.zhiji.ui.make
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -10,8 +11,10 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import com.sdu.zhiji.MainActivity
 import com.sdu.zhiji.R
 import com.sdu.zhiji.databinding.FragmentMakeBinding
+import com.sdu.zhiji.mbti_MainActivity
 
 class MakeFragment : Fragment() {
 
@@ -67,6 +70,13 @@ class MakeFragment : Fragment() {
                 progressbar.progress=0
             }
 
+        }
+
+        //MBTI问卷
+        val mbti:ImageView=root.findViewById(R.id.make_top_image)
+        mbti.setOnClickListener{
+            val intent=Intent(activity, mbti_MainActivity::class.java)
+            startActivity(intent)
         }
 
 

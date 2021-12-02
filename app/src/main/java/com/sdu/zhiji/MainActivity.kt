@@ -1,5 +1,6 @@
 package com.sdu.zhiji
 
+import android.content.Intent
 import android.content.pm.ActivityInfo
 import android.os.Bundle
 import android.view.View
@@ -52,6 +53,9 @@ class MainActivity : AppCompatActivity() {
 
         //保持竖屏
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT)
+
+
+
     }
 
 }

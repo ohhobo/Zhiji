@@ -10,15 +10,54 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Zhiji">
         <activity
+            android:name=".mbti_MainActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:label="@string/title_main" />
+        <activity
+            android:name=".mbti_AboutAppActivity"
+            android:label="@string/title_about_app" />
+        <activity
+            android:name=".mbti_AboutTestActivity"
+            android:label="@string/title_about_test" />
+        <activity
+            android:name=".mbti_DescriptorsListActivity"
+            android:label="@string/title_descriptor" />
+        <activity
+            android:name=".mbti_DescriptorActivity"
+            android:label="@string/title_descriptor" />
+        <activity
+            android:name=".mbti_PersonTypesListActivity"
+            android:label="@string/title_person_type" />
+        <activity
+            android:name=".mbti_PersonTypeActivity"
+            android:label="@string/title_person_type" />
+        <activity
+            android:name=".mbti_PrewordActivity"
+            android:label="@string/title_preword" />
+        <activity
+            android:name=".mbti_TestQuestionActivity"
+            android:label="@string/title_test" />
+        <activity
+            android:name=".mbti_ResultActivity"
+            android:label="@string/title_result" />
+        <activity
+            android:name=".mbti_ResultsListActivity"
+            android:label="@string/title_result" />
+        <activity
+            android:name=".mbti_DetailResultActivity"
+            android:label="@string/title_result" />
+        <activity
             android:name=".MainActivity"
             android:exported="false"
             android:screenOrientation="portrait"
             android:label="@string/title_activity_main"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"
             android:windowSoftInputMode="adjustPan|stateHidden"/>
         <activity
             android:name=".WelcomeActivity"
             android:screenOrientation="portrait"
-            android:exported="true">
+            android:exported="true"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

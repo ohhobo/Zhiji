@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_short_test"
+            android:title="@string/nav_short_test" />
+        <item
+            android:id="@+id/nav_long_test"
+            android:title="@string/nav_long_test" />
+        <item
+            android:id="@+id/nav_results"
+            android:title="@string/nav_results" />
+    </group>
+
+    <item android:title="@string/nav_item_test">
+        <menu>
+            <item
+                android:id="@+id/nav_about_test"
+                android:title="@string/nav_about_test" />
+            <item
+                android:id="@+id/nav_descriptions"
+                android:title="@string/nav_descriptors" />
+            <item
+                android:id="@+id/nav_person_types"
+                android:title="@string/nav_person_types" />
+        </menu>
+    </item>
+
+    <item android:title="@string/nav_item_app">
+        <menu>
+            <item
+                android:id="@+id/nav_about_app"
+                android:title="@string/nav_about_app" />
+        </menu>
+    </item>
+
+</menu>

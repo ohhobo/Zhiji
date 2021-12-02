@@ -5,4 +5,122 @@
     <string name="title_chat">聊</string>
     <string name="title_make">定制</string>
     <string name="title_mine">我的</string>
+
+    <string name="app_version">1.0.0</string>
+
+    <string name="title_main">首页</string>
+    <string name="title_about_test">关于测试</string>
+    <string name="title_descriptor">描述符</string>
+    <string name="title_about_app">关于应用程序</string>
+    <string name="title_person_type">人格类型</string>
+    <string name="title_preword">重述</string>
+    <string name="title_result">结果</string>
+    <string name="title_test">测试</string>
+
+    <string name="detail_e">外向</string>
+    <string name="detail_i">内向</string>
+    <string name="detail_s">感觉</string>
+    <string name="detail_n">直觉</string>
+    <string name="detail_t">思维</string>
+    <string name="detail_f">情感</string>
+    <string name="detail_j">判断</string>
+    <string name="detail_p">知觉</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="nav_short_test">快速测试</string>
+    <string name="nav_long_test">全面测试</string>
+    <string name="nav_results">审查结果</string>
+    <string name="nav_about_test">关于测试</string>
+    <string name="nav_descriptors">描述符</string>
+    <string name="nav_person_types">人格类型</string>
+    <string name="nav_about_app">关于应用程序</string>
+    <string name="nav_about_dev">造物主</string>
+    <string name="nav_item_test">测试数据</string>
+    <string name="nav_item_app">应用程序</string>
+
+    <string name="about_app_version">1.0.0</string>
+    <string name="about_app_devs">
+        开发商
+    </string>
+
+    <string name="test_next">next</string>
+
+    <string name="about_test_title">MBTI</string>
+    <string name="about_test_text">
+        tipologia的起源可以追溯到carl young的作品1921年，《心理类型》一书提出了基本的心理功能，
+        帮助人类感知世界，四个。这是思想、感觉、直觉和感觉。
+        这项工作远比美国女演员凯瑟琳·布里格斯(katherine briggs)所代表的要基本得多。
+        我只是想知道不同性格的不同。但是当我遇到tipologia的时候
+        在她女儿伊莎贝尔·布里格斯-迈尔斯的支持下，她开始深入研究。
+        这个问题甚至发表了一些科学论文。她还突出了一些类型
+        四个，我自己也承认，是基于荣格的作品。但后来的理论
+        她扩大了自己的女儿，使她成为现代女性。
+    </string>
+
+    <string name="descriptions_title">描述符</string>
+    <string name="descriptions_text">
+        它发生在第二次世界大战期间。就在那时，Myers-Briggs - Indicator出现了。
+        (MBTI是一种常见的tipologia，也经常使用“社会学”这个词。不是
+        研究人员的“裸体”理论是基于他们自己设计的原始测试。
+        研究的目的是最崇高的:通过测试来确定个体
+        工作中的个人偏好，选择那些应该被取代的女性
+        为参军的人生产，在那里他们可以充分展示自己。
+        天赋。后来，在50年代和60年代，tipologia受到了著名科学家的积极评价。
+        新的实验已经完成，使技术更加精确。但除了追随者，MBTI还有
+        一些评论家认为迈尔斯-布里格斯的tipologius几乎是复制的。
+        荣格的研究是理论上的，在实践中并不总是能发现它的有效性。
+    </string>
+
+    <string name="persons_title">16种人格类型:对测试结果的解释</string>
+    <string name="persons_text">
+        你得到的结果是16种人格类型之一
+        以上四种描述符交点的结果是，每一种描述符包含两种元素(四种)。
+        第16区这16种类型被指定为每一种类型的标准名称
+        更容易导航:
+    </string>
+
+    <string name="main_title">MBTI</string>
+    <string name="main_text">
+        在考试开始前，重要的是要了解以下几点:
+        再多的问题，再多的问题，再多的问题，再多的问题，再多的问题，再多的问题，再多的问题。这个测试只允许“设定一个框架”，并指出一个偏差，而不是一个属性对另一个属性的普遍支配。
+        无论你是哪种类型的人，每个人在日常生活中都使用不同程度的偏好两极。例如，我们可以与熟悉的人交往，但更常见的是内向的人。
+        当你回答一个问题时，选择一个在大多数情况下你最喜欢和舒适的选择。如果你不喜欢这两种选择，那就选择最不吸引人的。
+        通过测试，你不仅能识别出自己的性格类型，还能得到一个简短的解释。不要忘记回答所有的问题，这是最好的方法。</string>
+    <string name="main_btn_start_short">进行快速测试</string>
+    <string name="main_btn_start_long">运行完整测试</string>
+
+    <string name="preword_title">测试手册</string>
+    <string name="preword_text">
+        <b>在你开始之前读一下:</b>
+            因为通常不可能给出一个简单的答案，所以答案是根据喜好给出的。
+            慢慢地回答，不要欺骗自己，你不能回去修复它。
+            如果你觉得两者都很接近，那就把答案的值留到50/50。
+    </string>
+
+    <string name="result_page">查看自己的性格</string>
+    <string name="result_lead">搜集有关组织文化的资料</string>
+    <string name="result_detail">更多资料细节</string>
+    <string name="result_save">保存</string>
+    <string name="result_user">用户</string>
+    <string name="result_user_hint">你的名字</string>
+
+    <string name="result_lead_leader">"领导"型信息</string>
+    <string name="result_lead_employ">"下属"型信息</string>
+
+
+    <string name="lead_culture">组织文化</string>
+    <string name="lead_c">氏族</string>
+    <string name="lead_a">专制</string>
+    <string name="lead_b">官僚主义</string>
+    <string name="lead_m">市场</string>
+
+    <string name="lead_axes">评估轴</string>
+    <string name="lead_1">灵活性和离散性</string>
+    <string name="lead_2">稳定与控制</string>
+    <string name="lead_3">内部焦点与整合</string>
+    <string name="lead_4">外部方向和偏差</string>
+
+    <string name="action_settings">Settings</string>
 </resources>

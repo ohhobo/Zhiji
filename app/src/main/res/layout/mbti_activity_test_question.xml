@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sdu.zhiji.mbti_TestQuestionActivity">
+
+    <FrameLayout
+        android:layout_weight="2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+        <ImageView
+            android:src="@color/colorPrimaryDark"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/test_q"
+            android:text="ede"
+            android:textSize="@dimen/text_h1"
+            android:textStyle="bold"
+            android:textColor="#fff"
+            android:gravity="center"
+            android:layout_margin="@dimen/marg_s"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.sdu.zhiji.widget.VerticalSeekBar
+                android:id="@+id/test_answer_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:max="100"
+                android:progress="50"
+                android:thumb="@android:drawable/presence_online"
+                tools:ignore="MissingClass" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="5"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/test_a1"
+                android:text="bla"
+                android:textSize="@dimen/text_h1"
+                android:gravity="center_vertical"
+                android:layout_margin="@dimen/marg_s"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp" />
+            <TextView
+                android:id="@+id/test_a2"
+                android:text="bla"
+                android:textSize="@dimen/text_h1"
+                android:gravity="center_vertical"
+                android:layout_margin="@dimen/marg_s"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:id="@+id/test_a1_position"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:text="50"
+                android:textSize="@dimen/text_h2"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/test_a2_position"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:text="50"
+                android:textSize="@dimen/text_h2"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/test_next"
+        android:text="@string/test_next"
+        android:textSize="@dimen/text_h3"
+        android:textStyle="bold"
+        android:textColor="#fff"
+        android:background="@color/colorPrimaryDark"
+        android:layout_margin="@dimen/marg_s"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

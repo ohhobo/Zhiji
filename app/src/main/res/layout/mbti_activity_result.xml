@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:padding="@dimen/marg_s"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sdu.zhiji.mbti_ResultActivity">
+
+    <TextView
+        android:id="@+id/result_type"
+        android:text=""
+        android:textSize="@dimen/text_h1"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_marginBottom="@dimen/marg_s"
+        android:layout_marginTop="@dimen/marg_s"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:id="@+id/result_save_block"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/result_user"
+            android:text="@string/result_user"
+            android:hint="@string/result_user_hint"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/result_save"
+            android:text="@string/result_save"
+            android:textSize="@dimen/text_p"
+            android:textColor="#fff"
+            android:background="@color/colorPrimaryDark"
+            android:padding="@dimen/marg_s"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+        <com.jjoe64.graphview.GraphView
+            android:id="@+id/result_graph"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/marg_s"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:layout_margin="@dimen/marg_s"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp">
+                <TextView
+                    android:text="定位（EI）"
+                    android:layout_margin="@dimen/marg_s"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent" />
+                <TextView
+                    android:text="悟性（SN）"
+                    android:layout_margin="@dimen/marg_s"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp">
+                <TextView
+                    android:text="决定（TF）"
+                    android:layout_margin="@dimen/marg_s"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent" />
+                <TextView
+                    android:text="态度（JP）"
+                    android:layout_margin="@dimen/marg_s"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/result_page"
+        android:text="@string/result_page"
+        android:textSize="@dimen/text_h3"
+        android:textStyle="bold"
+        android:textColor="#fff"
+        android:background="@color/colorPrimaryDark"
+        android:layout_marginBottom="@dimen/marg_s"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/result_detail"
+        android:text="@string/result_detail"
+        android:textSize="@dimen/text_h3"
+        android:textStyle="bold"
+        android:textColor="#fff"
+        android:background="@color/colorPrimaryDark"
+        android:layout_marginBottom="@dimen/marg_s"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
