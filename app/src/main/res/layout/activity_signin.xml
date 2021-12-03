@@ -85,9 +85,10 @@
 
     <EditText
         android:id="@+id/signin_username"
-        android:layout_width="130dp"
+        android:layout_width="180dp"
         android:layout_height="40dp"
         android:hint="@string/usr_en"
+        android:maxLength="16"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0"
         app:layout_constraintLeft_toLeftOf="@+id/signin_icon_logo"
@@ -123,9 +124,11 @@
 
     <EditText
         android:id="@+id/signin_password"
-        android:layout_width="130dp"
+        android:layout_width="180dp"
         android:layout_height="40dp"
         android:hint="@string/psw_en"
+        android:inputType="textPassword"
+        android:maxLength="16"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0"
         app:layout_constraintLeft_toLeftOf="@+id/signin_icon_logo"

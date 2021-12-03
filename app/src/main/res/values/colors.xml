@@ -8,4 +8,5 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="blue_welcome">#1F0000FF</color>
+    <color name="chat_back">#d8e0e8</color>
 </resources>
