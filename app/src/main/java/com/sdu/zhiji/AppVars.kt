@@ -74,24 +74,6 @@ class IConnect(ipAddress: String, port: Int) {
             return null
         return String(inMessage, 0, a)
     }
-
-//    fun mainProcess() {
-//        thread {
-//            val scan = Scanner(System.`in`)
-//            while (true) {
-//                val string: String = scan.nextLine()
-//                sendR(string);
-//            }
-//        }
-//        thread {
-//            while (true) {
-//                val string: String? = recvR()
-//                if (string != null)
-//                    println(string)
-//                else continue
-//            }
-//        }
-//    }
 }
 
 //api for sign_in
