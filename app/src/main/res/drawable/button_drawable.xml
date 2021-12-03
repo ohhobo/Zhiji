@@ -2,13 +2,13 @@
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
     android:shape="rectangle">
     <!--设置背景色 #3c78d8-->
-    <solid android:color="#000000" />
+    <solid android:color="@color/teal_200" />
     <!--设置圆角-->
     <corners android:radius="105dip" />
     <padding
         android:bottom="12dp"
-        android:left="63dp"
-        android:right="63dp"
+        android:left="32dp"
+        android:right="32dp"
         android:top="12dp"
         />
 </shape>

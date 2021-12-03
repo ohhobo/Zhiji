@@ -18,6 +18,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/purple_500"
         app:layout_constraintVertical_bias="0"></Button>
 
     <Button
@@ -26,6 +27,7 @@
         android:layout_height="wrap_content"
         android:text="chat"
         android:textSize="20sp"
+        android:background="@color/purple_500"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
