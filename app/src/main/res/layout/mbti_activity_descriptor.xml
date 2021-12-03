@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.sdu.zhiji.mbti_DescriptorActivity">
+    tools:context="com.sdu.zhiji.MBTI.mbti_DescriptorActivity">
 
     <LinearLayout
         android:orientation="vertical"

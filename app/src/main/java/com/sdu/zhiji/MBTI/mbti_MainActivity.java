@@ -1,18 +1,18 @@
-package com.sdu.zhiji;
+package com.sdu.zhiji.MBTI;
 
 import android.content.Intent;
 import android.os.Bundle;
 import com.google.android.material.navigation.NavigationView;
+import com.sdu.zhiji.R;
+
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.widget.Toolbar;
 
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.Button;
 
 public class mbti_MainActivity extends AppCompatActivity
@@ -109,9 +109,6 @@ public class mbti_MainActivity extends AppCompatActivity
             startActivity(intent);
         } else if (id == R.id.nav_person_types) {
             Intent intent = new Intent(this, mbti_PersonTypesListActivity.class);
-            startActivity(intent);
-        } else if (id == R.id.nav_about_app) {
-            Intent intent = new Intent(this, mbti_AboutAppActivity.class);
             startActivity(intent);
         }
 

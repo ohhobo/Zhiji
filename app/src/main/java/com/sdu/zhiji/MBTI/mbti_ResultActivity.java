@@ -1,4 +1,4 @@
-package com.sdu.zhiji;
+package com.sdu.zhiji.MBTI;
 
 import android.content.ContentValues;
 import android.content.Intent;
@@ -12,6 +12,7 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.sdu.zhiji.R;
 import com.sdu.zhiji.app.DBHelper;
 import com.sdu.zhiji.data.ResultObject;
 import com.jjoe64.graphview.DefaultLabelFormatter;

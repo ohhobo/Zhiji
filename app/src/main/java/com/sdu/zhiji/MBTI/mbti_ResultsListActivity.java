@@ -1,4 +1,4 @@
-package com.sdu.zhiji;
+package com.sdu.zhiji.MBTI;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -11,6 +11,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.sdu.zhiji.R;
 import com.sdu.zhiji.app.DBHelper;
 import com.sdu.zhiji.dao.Result;
 import com.sdu.zhiji.data.ResultObject;

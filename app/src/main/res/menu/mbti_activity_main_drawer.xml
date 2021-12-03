@@ -26,13 +26,4 @@
                 android:title="@string/nav_person_types" />
         </menu>
     </item>
-
-    <item android:title="@string/nav_item_app">
-        <menu>
-            <item
-                android:id="@+id/nav_about_app"
-                android:title="@string/nav_about_app" />
-        </menu>
-    </item>
-
 </menu>

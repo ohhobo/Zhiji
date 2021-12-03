@@ -6,7 +6,7 @@
     android:padding="@dimen/marg_s"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.sdu.zhiji.mbti_ResultActivity">
+    tools:context="com.sdu.zhiji.MBTI.mbti_ResultActivity">
 
     <TextView
         android:id="@+id/result_type"

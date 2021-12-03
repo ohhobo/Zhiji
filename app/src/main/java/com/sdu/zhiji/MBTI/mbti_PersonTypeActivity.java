@@ -1,8 +1,10 @@
-package com.sdu.zhiji;
+package com.sdu.zhiji.MBTI;
 
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import android.widget.TextView;
+
+import com.sdu.zhiji.R;
 
 public class mbti_PersonTypeActivity extends AppCompatActivity {
 

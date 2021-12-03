@@ -1,4 +1,4 @@
-package com.sdu.zhiji;
+package com.sdu.zhiji.MBTI;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
+import com.sdu.zhiji.R;
 import com.sdu.zhiji.dao.Answer;
 import com.sdu.zhiji.dao.Question;
 import com.sdu.zhiji.data.Data;

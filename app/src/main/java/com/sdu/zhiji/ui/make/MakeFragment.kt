@@ -9,12 +9,10 @@ import android.widget.ImageView
 import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.sdu.zhiji.MainActivity
 import com.sdu.zhiji.R
 import com.sdu.zhiji.databinding.FragmentMakeBinding
-import com.sdu.zhiji.mbti_MainActivity
+import com.sdu.zhiji.MBTI.mbti_MainActivity
 
 class MakeFragment : Fragment() {
 

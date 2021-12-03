@@ -12,14 +12,13 @@ public class DBHelper extends SQLiteOpenHelper {
     public final static String TABLE_RESULTS = "results";
 
     public DBHelper(Context context) {
-        // конструктор суперкласса
         super(context, LDB_NAME, null, LDB_VERSION);
     }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
         Log.d("local_db", "--- onCreate database ---");
-        // создаем таблицу с полями
+
         db.execSQL("create table results ("
                 + "id integer primary key autoincrement,"
                 + "person varchar(50),"

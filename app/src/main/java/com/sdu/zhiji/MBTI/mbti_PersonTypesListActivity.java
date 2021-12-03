@@ -1,4 +1,4 @@
-package com.sdu.zhiji;
+package com.sdu.zhiji.MBTI;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,26 +9,28 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-public class mbti_DescriptorsListActivity extends AppCompatActivity {
+import com.sdu.zhiji.R;
 
-    private ListView lstDescriptors;
+public class mbti_PersonTypesListActivity extends AppCompatActivity {
+
+    private ListView lstPersons;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.mbti_activity_descriptors);
+        setContentView(R.layout.mbti_activity_person_types_list);
 
-        lstDescriptors = (ListView)findViewById(R.id.descriptors_list);
-        ArrayAdapter<String> descriptors = new ArrayAdapter<String>(this
+        lstPersons = (ListView)findViewById(R.id.persons_list);
+        ArrayAdapter<String> persons = new ArrayAdapter<>(this
                 , android.R.layout.simple_list_item_1
-                , getResources().getStringArray(R.array.descriptor_title));
-        lstDescriptors.setAdapter(descriptors);
-        setListViewHeightBasedOnChildren(lstDescriptors);
+                , getResources().getStringArray(R.array.persons_title));
+        lstPersons.setAdapter(persons);
+        setListViewHeightBasedOnChildren(lstPersons);
 
-        lstDescriptors.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        lstPersons.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Intent intent = new Intent(mbti_DescriptorsListActivity.this, mbti_DescriptorActivity.class);
+                Intent intent = new Intent(mbti_PersonTypesListActivity.this, mbti_PersonTypeActivity.class);
                 intent.putExtra(mbti_DescriptorActivity.ID, i);
                 startActivity(intent);
             }
