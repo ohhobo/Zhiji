@@ -1,27 +1,19 @@
 package com.sdu.zhiji
 
 
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
-import android.os.PersistableBundle
-import kotlin.math.log
-import android.content.Intent
 import android.util.Log
-import android.widget.Button
-import android.widget.EditText
-import android.widget.Toast
-import androidx.core.graphics.scaleMatrix
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import android.widget.TextView
+import androidx.recyclerview.widget.RecyclerView
 import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
 import retrofit2.http.Query
 import java.io.InputStreamReader
 import java.net.Socket
-import java.util.*
-import kotlin.concurrent.thread
 
 val retrofit: Retrofit = Retrofit.Builder()
     .baseUrl("http://81.68.226.148/")
@@ -32,7 +24,45 @@ object SignStatus {
     var status: Int = 0
     var username: String = ""
 }
+class Msg(val content:String,val type:Int){
+    companion object{
+        const val type_received=0
+        const val type_sent=1
+    }
+}
+class MsgAdapter(val msglist:List<Msg>):RecyclerView.Adapter<RecyclerView.ViewHolder>(){
+    inner class LeftViewHolder(view:View):RecyclerView.ViewHolder(view){
+        val leftMsg:TextView=view.findViewById(R.id.chat_leftMsg)
+    }
+    inner class RightViewHolder(view: View):RecyclerView.ViewHolder(view){
+        val rightMsg:TextView=view.findViewById(R.id.chat_rightMsg)
+    }
 
+    override fun getItemViewType(position: Int): Int {
+        val msg=msglist[position]
+        return msg.type
+    }
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int)=if(viewType==Msg.type_received){
+        val view=LayoutInflater.from(parent.context).inflate(R.layout.msg_left,parent,false)
+        LeftViewHolder(view)
+    }
+    else {
+        val view=LayoutInflater.from(parent.context).inflate(R.layout.msg_right,parent,false)
+        RightViewHolder(view)
+    }
+
+    override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
+        val msg=msglist[position]
+        when(holder){
+            is LeftViewHolder->holder.leftMsg.text=msg.content
+            is RightViewHolder->holder.rightMsg.text=msg.content
+            else ->throw IllegalArgumentException()
+        }
+    }
+
+    override fun getItemCount(): Int =msglist.size
+}
 class IConnect(ipAddress: String, port: Int) {
     private val ip = ipAddress
     private val p = port
