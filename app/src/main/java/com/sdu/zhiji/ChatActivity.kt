@@ -30,12 +30,12 @@ class ChatActivity : AppCompatActivity() {
             val button1 = findViewById<Button>(R.id.chat_send)
             button1.setOnClickListener {
                 val editInput = findViewById<EditText>(R.id.chat_input)
-                thread {
-                    if(editInput.text.toString().isNotEmpty()) {
-                        val msg=Msg(editInput.text.toString(),Msg.type_sent)
-                        msgList.add(msg)
-                        adapter!!.notifyItemInserted(msgList.size-1)
-                        recyclerView.scrollToPosition(msgList.size-1)
+                if(editInput.text.toString().isNotEmpty()) {
+                    val msg = Msg(editInput.text.toString(), Msg.type_sent)
+                    msgList.add(msg)
+                    adapter!!.notifyItemInserted(msgList.size - 1)
+                    recyclerView.scrollToPosition(msgList.size - 1)
+                    thread {
                         socket!!.sendR(editInput.text.toString())
                         editInput.setText("")
                     }
