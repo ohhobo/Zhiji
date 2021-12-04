@@ -11,6 +11,7 @@
         android:id="@+id/signin_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@color/purple_500"
         android:text="@string/signin"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -18,16 +19,15 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:background="@color/purple_500"
         app:layout_constraintVertical_bias="0"></Button>
 
     <Button
         android:id="@+id/chat_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@color/purple_500"
         android:text="chat"
         android:textSize="20sp"
-        android:background="@color/purple_500"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
