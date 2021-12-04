@@ -10,4 +10,6 @@
     <string name="signup_now">立即注册</string>
     <string name="forget_password">忘记密码</string>
     <string name="caution">登录或注册即代表您同意职记隐私政策与用户协议</string>
+    <string name="send_en">发送</string>
+    <string name="flush_en">flush</string>
 </resources>

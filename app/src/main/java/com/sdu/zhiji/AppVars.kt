@@ -24,45 +24,55 @@ object SignStatus {
     var status: Int = 0
     var username: String = ""
 }
-class Msg(val content:String,val type:Int){
-    companion object{
-        const val type_received=0
-        const val type_sent=1
+
+class Msg(val content: String, val type: Int) {
+    companion object {
+        const val type_received = 0
+        const val type_sent = 1
     }
 }
-class MsgAdapter(val msglist:List<Msg>):RecyclerView.Adapter<RecyclerView.ViewHolder>(){
-    inner class LeftViewHolder(view:View):RecyclerView.ViewHolder(view){
-        val leftMsg:TextView=view.findViewById(R.id.chat_leftMsg)
+
+class MsgAdapter(val msglist: List<Msg>) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+    inner class LeftViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+        val leftMsg: TextView = view.findViewById(R.id.leftMsg)
     }
-    inner class RightViewHolder(view: View):RecyclerView.ViewHolder(view){
-        val rightMsg:TextView=view.findViewById(R.id.chat_rightMsg)
+
+    inner class RightViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+        val rightMsg: TextView = view.findViewById(R.id.rightMsg)
     }
 
     override fun getItemViewType(position: Int): Int {
-        val msg=msglist[position]
+        val msg = msglist[position]
         return msg.type
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int)=if(viewType==Msg.type_received){
-        val view=LayoutInflater.from(parent.context).inflate(R.layout.msg_left,parent,false)
-        LeftViewHolder(view)
-    }
-    else {
-        val view=LayoutInflater.from(parent.context).inflate(R.layout.msg_right,parent,false)
-        RightViewHolder(view)
-    }
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
+        if (viewType == Msg.type_received) {
+            val view = LayoutInflater.from(parent.context).inflate(R.layout.msg_left, parent, false)
+            LeftViewHolder(view)
+        } else {
+            val view =
+                LayoutInflater.from(parent.context).inflate(R.layout.msg_right, parent, false)
+            RightViewHolder(view)
+        }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
-        val msg=msglist[position]
-        when(holder){
-            is LeftViewHolder->holder.leftMsg.text=msg.content
-            is RightViewHolder->holder.rightMsg.text=msg.content
-            else ->throw IllegalArgumentException()
+        Log.d("chatActivity", "onBindViewHolder")
+        val msg = msglist[position]
+        Log.d("chatActivity", "position is $position")
+        when (holder) {
+            is LeftViewHolder -> holder.leftMsg.text = msg.content
+            is RightViewHolder -> holder.rightMsg.text = msg.content
+            else -> throw IllegalArgumentException()
         }
     }
 
-    override fun getItemCount(): Int =msglist.size
+    override fun getItemCount(): Int {
+        Log.d("chatActivity", "getItemCount and return value is ${msglist.size}")
+        return msglist.size
+    }
 }
+
 class IConnect(ipAddress: String, port: Int) {
     private val ip = ipAddress
     private val p = port
@@ -72,9 +82,9 @@ class IConnect(ipAddress: String, port: Int) {
     init {
         sc = Socket(ip, p)
         if (sc != null) {
-            Log.d("iconnect","connect server successfully")
+            Log.d("iconnect", "connect server successfully")
         } else {
-            Log.d("iconnect","connect fail now retry")
+            Log.d("iconnect", "connect fail now retry")
             while (!retry()) {
             }
         }

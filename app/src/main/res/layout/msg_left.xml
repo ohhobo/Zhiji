@@ -8,14 +8,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="left"
-        android:background="@drawable/bubbleleft">
+        android:background="@drawable/message_left">
 
         <TextView
-            android:id="@+id/chat_leftMsg"
+            android:id="@+id/leftMsg"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="10dp"
-            android:textColor="#fff"></TextView>
+            android:textColor="#000"></TextView>
     </LinearLayout>
 </FrameLayout>

@@ -7,13 +7,21 @@ import android.util.Log
 import android.view.Menu
 import android.widget.Button
 import android.widget.Toast
+import kotlin.concurrent.thread
 import kotlin.math.sign
 import kotlin.math.truncate
 
+var socket:IConnect? = null
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        thread {
+            if(socket==null) {
+                socket = IConnect("81.68.226.148", 90)
+                Log.d("chatActivity", "successful connecting")
+            }
+        }
         val button1 = findViewById<Button>(R.id.chat_button)
         button1.setOnClickListener {
                 val intent = Intent(this, ChatActivity::class.java)
