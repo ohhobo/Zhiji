@@ -5,11 +5,13 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.sdu.zhiji.ChatActivity
 import com.sdu.zhiji.R
 import com.sdu.zhiji.databinding.FragmentMakeBinding
 import com.sdu.zhiji.MBTI.mbti_MainActivity
@@ -77,6 +79,12 @@ class MakeFragment : Fragment() {
             startActivity(intent)
         }
 
+        //简历
+        val button_resume = root.findViewById<Button>(R.id.button_resume)
+        button_resume.setOnClickListener {
+            val intent = Intent(activity, ChatActivity::class.java)
+            startActivity(intent)
+        }
 
         return root
     }

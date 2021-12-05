@@ -15,4 +15,6 @@
     <color name="colorPrimary">#0000FF</color>
     <color name="colorPrimaryDark">#1E90FF</color>
     <color name="colorAccent">#87CEFA</color>
+    <color name="blue_welcome">#1F0000FF</color>
+    <color name="chat_back">#d8e0e8</color>
 </resources>

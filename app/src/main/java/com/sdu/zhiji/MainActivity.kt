@@ -3,18 +3,21 @@ package com.sdu.zhiji
 import android.content.Intent
 import android.content.pm.ActivityInfo
 import android.os.Bundle
-import android.view.View
+import android.util.Log
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.SearchView
+import android.widget.Toast
 import androidx.appcompat.widget.Toolbar
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.sdu.zhiji.databinding.ActivityMainBinding
+import kotlin.concurrent.thread
 
+var socket:IConnect? = null
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
@@ -53,8 +56,12 @@ class MainActivity : AppCompatActivity() {
 
         //保持竖屏
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT)
-
-
+        thread {
+            if(socket==null) {
+                socket = IConnect("81.68.226.148", 90)
+                Log.d("chatActivity", "successful connecting")
+            }
+        }
 
     }
 

@@ -1,17 +1,22 @@
 package com.sdu.zhiji.ui.mine
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.sdu.zhiji.R
+import com.sdu.zhiji.SignStatus
+import com.sdu.zhiji.SigninActivity
 import com.sdu.zhiji.databinding.FragmentMineBinding
 
 class MineFragment : Fragment() {
@@ -73,6 +78,20 @@ class MineFragment : Fragment() {
             button_likes.text=(button_likes.text.toString().toInt()+1).toString()
         }
 
+        //登录
+        val button_signin = root.findViewById<ImageView>(R.id.mine_image_top1)
+        button_signin.setOnClickListener {
+            if (SignStatus.status == 1)
+                Toast.makeText(activity, "already sign in", Toast.LENGTH_SHORT)
+            else {
+                val intent = Intent(activity, SigninActivity::class.java)
+                startActivity(intent)
+            }
+        }
+
+
+
+
         return root
     }
 
@@ -96,4 +115,6 @@ class MineFragment : Fragment() {
         recyclelist2.add(recycle_mine2(R.drawable.mine_achievement4,"第一份工资"))
         recyclelist2.add(recycle_mine2(R.drawable.mine_achievement1,"第一天上班"))
     }
+
+
 }
