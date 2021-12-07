@@ -73,17 +73,22 @@ class MakeFragment : Fragment() {
         }
 
         //MBTI问卷
+        val intent_mbti=Intent(activity, mbti_MainActivity::class.java)
         val mbti:ImageView=root.findViewById(R.id.make_top_image)
         mbti.setOnClickListener{
-            val intent=Intent(activity, mbti_MainActivity::class.java)
-            startActivity(intent)
+            startActivity(intent_mbti)
+        }
+
+        val button_psychological_test:Button=root.findViewById(R.id.button_psychological_test)
+        button_psychological_test.setOnClickListener{
+            startActivity(intent_mbti)
         }
 
         //简历
         val button_resume = root.findViewById<Button>(R.id.button_resume)
         button_resume.setOnClickListener {
-            val intent = Intent(activity, ChatActivity::class.java)
-            startActivity(intent)
+            val intent_resume = Intent(activity, ChatActivity::class.java)
+            startActivity(intent_resume)
         }
 
         return root

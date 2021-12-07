@@ -17,6 +17,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.sdu.zhiji.R
 import com.sdu.zhiji.SignStatus
 import com.sdu.zhiji.SigninActivity
+import com.sdu.zhiji.SignupActivity
 import com.sdu.zhiji.databinding.FragmentMineBinding
 
 class MineFragment : Fragment() {
@@ -79,17 +80,35 @@ class MineFragment : Fragment() {
         }
 
         //登录
+        val intent_signin = Intent(activity, SigninActivity::class.java)
         val button_signin = root.findViewById<ImageView>(R.id.mine_image_top1)
         button_signin.setOnClickListener {
             if (SignStatus.status == 1)
                 Toast.makeText(activity, "already sign in", Toast.LENGTH_SHORT)
             else {
-                val intent = Intent(activity, SigninActivity::class.java)
-                startActivity(intent)
+                startActivity(intent_signin)
             }
         }
 
+        val image_signin:ImageView=root.findViewById(R.id.image_signin)
+        image_signin.setOnClickListener {
+            if (SignStatus.status == 1)
+                Toast.makeText(activity, "already sign in", Toast.LENGTH_SHORT)
+            else {
+                startActivity(intent_signin)
+            }
+        }
 
+        //注册
+        val intent_signup = Intent(activity, SignupActivity::class.java)
+        val image_signup:ImageView=root.findViewById(R.id.image_signup)
+        image_signup.setOnClickListener {
+            if (SignStatus.status == 1)
+                Toast.makeText(activity, "already sign in", Toast.LENGTH_SHORT)
+            else {
+                startActivity(intent_signup)
+            }
+        }
 
 
         return root
