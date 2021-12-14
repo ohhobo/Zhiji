@@ -9,6 +9,7 @@ import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.LinearLayout
+import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -126,7 +127,7 @@ class ChatActivity : AppCompatActivity(), CoroutineScope {
                             inStream2?.close()
                             outStream?.close()
                             outStream2?.close()
-                            val intent= Intent(this@ChatActivity,MainActivity::class.java)
+                            val intent = Intent(this@ChatActivity, MainActivity::class.java)
                             startActivity(intent)
                         }
                     }
