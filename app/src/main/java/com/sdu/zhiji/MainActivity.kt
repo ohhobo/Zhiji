@@ -1,5 +1,6 @@
 package com.sdu.zhiji
 
+import android.Manifest
 import android.content.Intent
 import android.content.pm.ActivityInfo
 import android.os.Bundle
@@ -17,6 +18,7 @@ import androidx.navigation.ui.setupWithNavController
 import com.sdu.zhiji.databinding.ActivityMainBinding
 import kotlin.concurrent.thread
 
+const val REQUEST_WRITE_EXTERNAL_STORAGE=1
 var socket:IConnect? = null
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -37,14 +39,12 @@ class MainActivity : AppCompatActivity() {
         val toolbar1:Toolbar=findViewById(R.id.toolBar1)
         toolbar1.title=" "
         setSupportActionBar(toolbar1)
-
         //搜索框
         val search1: SearchView =findViewById(R.id.search1)
         search1.setIconifiedByDefault(false)
         search1.setQueryHint("大家都在搜...")
         //通知按钮
         val notice: ImageView =findViewById(R.id.imageButton1)
-
         //保持竖屏
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT)
         thread {
@@ -53,6 +53,10 @@ class MainActivity : AppCompatActivity() {
                 Log.d("chatActivity", "successful connecting")
             }
         }
+        requestPermissions(
+            arrayOf(Manifest.permission.WRITE_EXTERNAL_STORAGE),
+            REQUEST_WRITE_EXTERNAL_STORAGE
+        )
 
     }
 

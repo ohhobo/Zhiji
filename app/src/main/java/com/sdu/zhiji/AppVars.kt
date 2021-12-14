@@ -36,7 +36,6 @@ interface GitHubService {
     @GET
     fun downloadFile(@Url url: String): Call<ResponseBody>
     companion object {
-        //Volatile 注解同java中的 volatile关键字,表示属性更新后在其他线程立即可见
         @Volatile
         private var instance: GitHubService? = null
         fun getInstance(): GitHubService = instance ?: synchronized(GitHubService::class.java) {
