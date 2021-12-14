@@ -1,6 +1,7 @@
 package com.sdu.zhiji
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.*
 import androidx.appcompat.app.AppCompatActivity
 import android.util.Log
@@ -11,6 +12,7 @@ import androidx.annotation.RequiresApi
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import kotlinx.coroutines.delay
 import java.security.KeyStore
 import java.time.LocalDateTime
 import java.util.*
@@ -53,11 +55,26 @@ class ChatActivity : AppCompatActivity() {
                 recyclerView.scrollToPosition(msgList.size - 1)
             }
         }
+        val handler1=object :Handler(Looper.getMainLooper()){
+            override fun handleMessage(msg: Message) {
+                super.handleMessage(msg)
+                Log.d("chatActivity","prepare to exit")
+                recyclerView.scrollToPosition(msgList.size-1)
+                val intent=Intent(this@ChatActivity,MainActivity::class.java)
+                startActivity(intent)
+            }
+        }
         var str: String? = null
         thread {
             while (true) {
                 str = socket!!.recvR()
-                if (str.toString().isNotEmpty()) {
+                if(str.toString()=="#exit"){
+                    val msg=Msg("服务已经结束",Msg.type_received)
+                    msgList.add(msg)
+                    val message=Message.obtain()
+                    handler1.sendMessage(message)
+                }
+                else if (str.toString().isNotEmpty()) {
                     Log.d("chatActivity", "msg:${str.toString()}")
                     val msg = Msg(str.toString(), Msg.type_received)
                     msgList.add(msg)

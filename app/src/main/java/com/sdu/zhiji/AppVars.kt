@@ -13,6 +13,42 @@ import retrofit2.http.GET
 import retrofit2.http.Query
 import java.io.InputStreamReader
 import java.net.Socket
+import okhttp3.ResponseBody
+import retrofit2.http.Path
+import retrofit2.http.Streaming
+import retrofit2.http.Url
+import com.google.gson.annotations.SerializedName
+
+data class Repo(
+    val id: Int,
+    @SerializedName("name")
+    val name: String,
+    @SerializedName("full_name")
+    val fullName: String,
+    @SerializedName("description")
+    val description: String?
+)
+
+interface GitHubService {
+    @GET("users/{user}/repos")
+    fun getListRepos(@Path("user") user: String): Call<List<Repo>>
+    @Streaming
+    @GET
+    fun downloadFile(@Url url: String): Call<ResponseBody>
+    companion object {
+        //Volatile 注解同java中的 volatile关键字,表示属性更新后在其他线程立即可见
+        @Volatile
+        private var instance: GitHubService? = null
+        fun getInstance(): GitHubService = instance ?: synchronized(GitHubService::class.java) {
+            instance ?: Retrofit.Builder()
+                .baseUrl("https://api.github.com/")
+                .addConverterFactory(GsonConverterFactory.create())
+                .build()
+                .create(GitHubService::class.java)
+                .also { instance = it }
+        }
+    }
+}
 
 val retrofit: Retrofit = Retrofit.Builder()
     .baseUrl("http://81.68.226.148/")
