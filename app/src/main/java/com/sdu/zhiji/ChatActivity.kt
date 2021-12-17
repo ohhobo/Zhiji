@@ -1,34 +1,22 @@
 package com.sdu.zhiji
 
-import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.*
 import androidx.appcompat.app.AppCompatActivity
 import android.util.Log
-import android.view.View
-import android.widget.Button
-import android.widget.EditText
-import android.widget.LinearLayout
-import android.widget.Toast
-import androidx.annotation.RequiresApi
-import androidx.constraintlayout.widget.ConstraintLayout
+import android.widget.*
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.coroutines.*
-import okhttp3.Dispatcher
-import retrofit2.http.Url
 import java.io.File
 import java.io.InputStream
 import java.io.OutputStream
 import java.lang.Exception
-import java.security.KeyStore
-import java.time.LocalDateTime
-import java.util.*
 import kotlin.collections.ArrayList
-import kotlin.concurrent.schedule
 import kotlin.concurrent.thread
-import kotlin.concurrent.timer
 import kotlin.coroutines.CoroutineContext
+
+var socket: IConnect? = null
 
 class ChatActivity : AppCompatActivity(), CoroutineScope {
     private lateinit var job: Job
@@ -36,10 +24,24 @@ class ChatActivity : AppCompatActivity(), CoroutineScope {
         get() = job + Dispatchers.Main
     val msgList = ArrayList<Msg>()
     var adapter: MsgAdapter? = null
+    private fun stringPro1(url:String,str: String): String {
+        return when (str) {
+            "#exit1" -> "$url${SignStatus.username}/resume1.pdf"
+            "#exit2" -> "$url${SignStatus.username}/resume2.pdf"
+            "#exit3" -> "$url${SignStatus.username}/resume3.pdf"
+            "#exit4" -> "$url${SignStatus.username}/resume4.pdf"
+            else -> str
+        }
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        val url = "http://81.68.226.148/files/pdffiles/pdftest.pdf"
-        val url2 = "http://81.68.226.148/files/wordfiles/wordtest.docx"
+        thread {
+            if (socket == null) {
+                socket = IConnect("81.68.226.148", 90)
+                Log.d("chatActivity", "successful connecting")
+            }
+        }
+        var url: String = "http://81.68.226.148/files/"
         super.onCreate(savedInstanceState)
         job = Job()
         setContentView(R.layout.activity_chat)
@@ -82,53 +84,31 @@ class ChatActivity : AppCompatActivity(), CoroutineScope {
                                 )
                             }"
                         )
-                    val file2 =
-                        File(
-                            "${Environment.getExternalStorageDirectory().path}/Download/${
-                                url2.substringAfterLast(
-                                    "/"
-                                )
-                            }"
-                        )
                     file.createNewFile()
-                    file2.createNewFile()
                     val response = GitHubService.getInstance().downloadFile(url).execute()
                     val body = response.body()
-                    val response2 = GitHubService.getInstance().downloadFile(url2).execute()
-                    val body2 = response2.body()
-                    if (response.isSuccessful && body != null && response2.isSuccessful && body2 != null) {
+                    if (response.isSuccessful && body != null) {
                         var inStream: InputStream? = null
                         var outStream: OutputStream? = null
-                        var inStream2: InputStream? = null
-                        var outStream2: OutputStream? = null
                         try {
                             inStream = body.byteStream()
                             outStream = file.outputStream()
-                            inStream2 = body2.byteStream()
-                            outStream2 = file2.outputStream()
                             val buff = ByteArray(1024)
-                            val buff2 = ByteArray(1024)
                             var len = inStream.read(buff)
-                            var len2 = inStream2.read(buff2)
-                            while (len != -1 || len2 != -1) {
-                                if (len != -1) {
-                                    outStream.write(buff, 0, len)
-                                    len = inStream.read(buff)
-                                }
-                                if (len2 != -1) {
-                                    outStream2.write(buff2, 0, len2)
-                                    len2 = inStream2.read(buff2)
-                                }
+                            while (len != -1) {
+                                outStream.write(buff, 0, len)
+                                len = inStream.read(buff)
                             }
                         } catch (e: Exception) {
                             e.printStackTrace()
                         } finally {
                             inStream?.close()
-                            inStream2?.close()
                             outStream?.close()
-                            outStream2?.close()
-                            val intent = Intent(this@ChatActivity, MainActivity::class.java)
-                            startActivity(intent)
+                            socket?.disconnect()
+                            val intent = Intent()
+                            intent.putExtra("return", "hello hello")
+                            setResult(RESULT_OK, intent)
+                            finish()
                         }
                     }
                 }
@@ -138,17 +118,17 @@ class ChatActivity : AppCompatActivity(), CoroutineScope {
         thread {
             while (true) {
                 str = socket!!.recvR()
-                if (str.toString() == "#exit") {
-                    val msg = Msg("服务已经结束", Msg.type_received)
-                    msgList.add(msg)
-                    val message = Message.obtain()
-                    handler1.sendMessage(message)
-                } else if (str.toString().isNotEmpty()) {
+                if (str.toString() == "#exit1" || str.toString() == "#exit2"
+                    || str.toString() == "#exit3" || str.toString() == "#exit4"
+                ) {
+                    url = stringPro1(url,str.toString())
+                    Log.i("chatActivity", "url is $url")
+                    msgList.add(Msg("服务已经结束", Msg.type_received))
+                    handler1.sendMessage(Message.obtain())
+                } else if (str.toString().isNotEmpty() && str.toString() != "null") {
                     Log.d("chatActivity", "msg:${str.toString()}")
-                    val msg = Msg(str.toString(), Msg.type_received)
-                    msgList.add(msg)
-                    val message = Message.obtain()
-                    handler.sendMessage(message)
+                    msgList.add(Msg(str.toString(), Msg.type_received))
+                    handler.sendMessage(Message.obtain())
                 }
             }
         }

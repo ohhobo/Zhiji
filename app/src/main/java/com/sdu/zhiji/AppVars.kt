@@ -91,9 +91,7 @@ class MsgAdapter(val msglist: List<Msg>) : RecyclerView.Adapter<RecyclerView.Vie
         }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
-        Log.d("chatActivity", "onBindViewHolder")
         val msg = msglist[position]
-        Log.d("chatActivity", "position is $position")
         when (holder) {
             is LeftViewHolder -> holder.leftMsg.text = msg.content
             is RightViewHolder -> holder.rightMsg.text = msg.content
@@ -102,7 +100,6 @@ class MsgAdapter(val msglist: List<Msg>) : RecyclerView.Adapter<RecyclerView.Vie
     }
 
     override fun getItemCount(): Int {
-        Log.d("chatActivity", "getItemCount and return value is ${msglist.size}")
         return msglist.size
     }
 }
@@ -147,6 +144,10 @@ class IConnect(ipAddress: String, port: Int) {
         if (a <= -1)
             return null
         return String(inMessage, 0, a)
+    }
+    fun disconnect(){
+        sc?.close()
+        sc=null
     }
 }
 

@@ -66,7 +66,11 @@
             android:label="@string/title_activity_main"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"
-            android:windowSoftInputMode="adjustPan|stateHidden" />
+            android:windowSoftInputMode="adjustPan|stateHidden">
+            <intent-filter>
+                <action android:name="com.sdu.zhiji.activity.main" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".WelcomeActivity"
             android:exported="true"
