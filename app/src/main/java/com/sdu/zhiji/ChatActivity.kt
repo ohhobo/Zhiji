@@ -34,13 +34,8 @@ class ChatActivity : AppCompatActivity(), CoroutineScope {
         }
     }
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
-        thread {
-            if (socket == null) {
-                socket = IConnect("81.68.226.148", 90)
-                Log.d("chatActivity", "successful connecting")
-            }
-        }
         var url: String = "http://81.68.226.148/files/"
         super.onCreate(savedInstanceState)
         job = Job()
@@ -114,10 +109,11 @@ class ChatActivity : AppCompatActivity(), CoroutineScope {
                 }
             }
         }
-        var str: String? = null
         thread {
+            if(socket==null)
+                socket = IConnect("81.68.226.148", 90)
             while (true) {
-                str = socket!!.recvR()
+                val str: String? = socket!!.recvR()
                 if (str.toString() == "#exit1" || str.toString() == "#exit2"
                     || str.toString() == "#exit3" || str.toString() == "#exit4"
                 ) {

@@ -5,6 +5,7 @@ import android.content.Intent
 import android.content.pm.ActivityInfo
 import android.os.Build
 import android.os.Bundle
+import android.os.Environment
 import android.util.Log
 import android.widget.Button
 import android.widget.ImageView
@@ -51,6 +52,7 @@ class MainActivity : AppCompatActivity() {
         val notice: ImageView =findViewById(R.id.imageButton1)
         //保持竖屏
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT)
+        Log.i("mainActivity", Environment.DIRECTORY_DOWNLOADS)
         requestPermissions(
             arrayOf(Manifest.permission.WRITE_EXTERNAL_STORAGE),
             REQUEST_WRITE_EXTERNAL_STORAGE

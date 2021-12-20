@@ -137,10 +137,15 @@ class IConnect(ipAddress: String, port: Int) {
     }
 
     fun recvR(): String? {
+        Log.i("chatActivity","1")
         val inStream = sc!!.getInputStream()
+        Log.i("chatActivity","2")
         val dataIn = InputStreamReader(inStream, "gb2312")
+        Log.i("chatActivity","3")
         val inMessage = CharArray(1024)
+        Log.i("chatActivity","4")
         val a = dataIn.read(inMessage)
+        Log.i("chatActivity","5")
         if (a <= -1)
             return null
         return String(inMessage, 0, a)
