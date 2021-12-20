@@ -18,7 +18,6 @@ import retrofit2.http.Path
 import retrofit2.http.Streaming
 import retrofit2.http.Url
 import com.google.gson.annotations.SerializedName
-
 data class Repo(
     val id: Int,
     @SerializedName("name")
